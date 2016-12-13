@@ -1,7 +1,5 @@
 package io.fusionbit.mvvmdemo;
 
-import android.support.annotation.Nullable;
-
 import viewmodel.ViewModel;
 
 /**
@@ -10,7 +8,7 @@ import viewmodel.ViewModel;
 
 public abstract class ItemViewModel<ITEM_T> extends ViewModel
 {
-    protected ItemViewModel(@Nullable State savedInstanceState)
+    public ItemViewModel()
     {
         super(null);
     }

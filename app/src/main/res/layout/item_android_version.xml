@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="io.fusionbit.mvvmdemo.AndroidVersionItemViewModel"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/versionItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        bind:selected="@{viewModel.selected}">
+
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.version}"
+            android:textStyle="bold"
+            tools:text="Android 6.0"/>
+
+        <TextView
+            android:id="@+id/codeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.codeName}"
+            android:textSize="20sp"
+            tools:text="Marshmallow"/>
+
+    </LinearLayout>
+
+
+</layout>
